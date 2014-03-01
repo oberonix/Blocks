@@ -28,7 +28,7 @@ class BlocksGame :
                     self.map[i][j] = 1
 
         #init renderer
-        self.renderer.createWindow(argv, 0, 0, 1024, 600, "Blocks", self)
+        self.renderer.createWindow(argv, 0, 0, 1024, 1024, "Blocks", self)
 
         #init gamestate
         self.locX = 3
@@ -112,7 +112,6 @@ class BlocksGame :
             self.eyeZ += .5
         elif key == ';' :
             self.eyeZ -= .5
-        glutPostRedisplay()
 
     def checkMove(self, x, y) :
         #boundary check

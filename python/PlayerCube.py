@@ -72,8 +72,9 @@ class PlayerCube :
                 self.posZ = self.baseZ
             else :
                 a = self.actionTime * 90.0
-                vOffset = .71 * sin(self.radianFactor * (a + 45))
-                if self.actionTime > 0.5 :
+                if self.actionTime < 0.5 :
+                    vOffset = .71 * sin(self.radianFactor * (a + 45))
+                else :
                     vOffset = .71 * cos(self.radianFactor * (a - 45))
                 vOffset -= .5
 
